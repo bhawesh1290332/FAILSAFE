@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAILSAFE — Student Risk Dashboard</title>
+  <title>FAILSAFE — Student Risk prediction</title>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -24,8 +24,6 @@
         radial-gradient(ellipse 50% 40% at 90% 80%, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
         radial-gradient(ellipse 40% 30% at 10% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 55%);
     }
-
-    /* Subtle animated grid pattern */
     body::before {
       content: '';
       position: fixed;
@@ -48,7 +46,6 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     .bar-fill { transition: width 0.6s cubic-bezier(.4,0,.2,1); }
 
-    /* Glassmorphism card base */
     .glass-card {
       background: rgba(255,255,255,0.035);
       backdrop-filter: blur(12px);
@@ -56,12 +53,10 @@
       border: 1px solid rgba(139,92,246,0.18);
     }
 
-    /* Glow effects */
     .glow-purple { box-shadow: 0 0 24px rgba(139,92,246,0.15), 0 1px 3px rgba(0,0,0,0.5); }
     .glow-red    { box-shadow: 0 0 20px rgba(239,68,68,0.12), 0 1px 3px rgba(0,0,0,0.5); }
     .glow-green  { box-shadow: 0 0 20px rgba(16,185,129,0.12), 0 1px 3px rgba(0,0,0,0.5); }
 
-    /* Gradient text */
     .grad-text {
       background: linear-gradient(135deg, #c084fc 0%, #818cf8 50%, #38bdf8 100%);
       -webkit-background-clip: text;
@@ -69,16 +64,12 @@
       background-clip: text;
     }
 
-    /* Upload zone hover pulse */
-    .upload-zone:hover { box-shadow: 0 0 32px rgba(139,92,246,0.2); }
+    .upload-zone:hover { box-shadow: 0 0 25px rgba(139,92,246,0.2); }
 
-    /* Table row hover */
     .student-row:hover { background: rgba(139,92,246,0.07) !important; }
 
-    /* Mono font for data */
     .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
 
-    /* Stat card accent bar */
     .accent-bar-purple { border-top: 2px solid rgba(139,92,246,0.6); }
     .accent-bar-red    { border-top: 2px solid rgba(239,68,68,0.6); }
     .accent-bar-green  { border-top: 2px solid rgba(16,185,129,0.6); }
