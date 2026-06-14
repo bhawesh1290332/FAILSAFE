@@ -84,7 +84,7 @@ Sample files included: `student-mat.csv` ·
 | ML Model | XGBoost (5-fold stratified cross-validation) |
 | Explainability | SHAP TreeExplainer |
 | Backend | FastAPI |
-| Frontend | React 18 + Tailwind CSS |
+| Frontend | React 18  |
 | Backend Hosting | Render |
 | Frontend Hosting | Netlify |
 
