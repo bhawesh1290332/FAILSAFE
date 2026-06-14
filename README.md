@@ -34,18 +34,28 @@ git clone https://github.com/ankit-xd03/FAILSAFE.git
 cd FAILSAFE
 ```
 
-### 2. Install dependencies
+### 2. create a virtual environment
+```bash
+python3 -m venv venv
+```
+
+### 3. Activate
+```bash
+source venv/bin/activate
+```
+
+### 4. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Start the backend
+### 5. Start the backend
 ```bash
 python3 -m uvicorn backend:app --reload
 ```
 Backend runs at `http://127.0.0.1:8000`
 
-### 4. Open the frontend
+### 6. Open the frontend
 Open `index.html` directly in your browser — done
 
 ---
