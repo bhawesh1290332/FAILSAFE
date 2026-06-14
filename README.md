@@ -1,1 +1,97 @@
-# FAILSAFE
+# FAILSAFE — Early Student Failure Risk Detection
+
+> An explainable AI system that predicts which students are at risk of academic failure — before it's too late.
+
+Built as part of coursework at **IIT Guwahati** by Ankit, Vaidik, and Bhawesh.
+
+---
+
+## 🔗 Live Demo
+
+👉 **[frabjous-sopapillas-2f9086.netlify.app](https://frabjous-sopapillas-2f9086.netlify.app)**
+
+No setup needed — open the link, upload a CSV, get results instantly.
+
+> ⚠️ First request may take ~60 seconds (Render free tier wakes up from sleep). Wait a moment and retry.
+
+---
+
+## 🧠 What it does
+
+Upload a student dataset and FAILSAFE will:
+- Predict which students are **at risk of failing**
+- Assign a **risk score** (0–100%) and level (HIGH / MEDIUM / LOW)
+- Show **why** using SHAP feature importance charts
+- Suggest **personalised interventions** for each at-risk student
+
+---
+
+## 🚀 Run Locally
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/ankit-xd03/FAILSAFE.git
+cd FAILSAFE
+```
+
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Start the backend
+```bash
+python3 -m uvicorn backend:app --reload
+```
+Backend runs at `http://127.0.0.1:8000`
+
+### 4. Open the frontend
+Open `index.html` directly in your browser — done!
+
+---
+
+## 📁 CSV Format
+
+Upload any student CSV with these columns:
+
+| Column | Description |
+|--------|-------------|
+| `school` | School name |
+| `sex` | Student gender |
+| `age` | Age |
+| `absences` | Number of absences |
+| `failures` | Past class failures |
+| `studytime` | Weekly study hours |
+
+Sample files included: `student-mat.csv` · `student-por.csv`
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| ML Model | XGBoost + Optuna (50-trial tuning) |
+| Explainability | SHAP TreeExplainer |
+| Backend | FastAPI |
+| Frontend | React 18 + Tailwind CSS |
+| Backend Hosting | Render |
+| Frontend Hosting | Netlify |
+
+---
+
+## 📡 API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/predict` | POST | Bulk risk prediction |
+| `/interventions` | POST | SHAP-based intervention plans |
+| `/batch-report` | POST | Download full CSV report |
+| `/student/{index}` | GET | Single student detail |
+
+---
+
+## 👨‍💻 Team
+
+**Ankit · Vaidik · Bhawesh**
+IIT Guwahati
